@@ -42,26 +42,19 @@
         <summary><h2>알람 화면 알아보기</h2></summary>
         <div class="carousel" data-carousel>
           <ol class="slides" tabindex="0" aria-label="알람 화면 알아보기 단계, 좌우로 넘겨 보세요">
-              <li class="slide" id="alarm-view-1" aria-roledescription="단계" aria-label="1 / 2">
+              <li class="slide" id="alarm-view-1" aria-roledescription="단계" aria-label="1 / 1">
                 <div class="slide-text">
-                  <p class="slide-step">1 / 2</p>
-                  <h3>설정한 알람을 한눈에 확인합니다</h3>
-                  <p>알람 화면에서는 설정한 알람을 그룹으로 나누어 확인할 수 있습니다.</p>
-                  <p>날짜와 상관없이 정한 시각에 울리는 ‘정시 알람’과, 근무에 맞춰 울리는 ‘근무 알람’의 <span class="cal-badge cal-badge--inline cal-badge--d">D</span> 근무, <span class="cal-badge cal-badge--inline cal-badge--m">M</span> 근무, <span class="cal-badge cal-badge--inline cal-badge--a">A</span> 근무, <span class="cal-badge cal-badge--inline cal-badge--n">N</span> 근무, <span class="cal-badge cal-badge--inline cal-badge--n is-wide">N3</span> 근무 그룹으로 나뉩니다.</p>
+                  <p class="slide-step">1 / 1</p>
+                  <h3>설정한 알람을 근무별로 한눈에 확인합니다</h3>
+                  <p>알람 화면에서는 설정한 알람을 근무형태별 그룹으로 나누어 확인할 수 있습니다. 근무 알람은 <span class="cal-badge cal-badge--inline cal-badge--d">D</span> <span class="cal-badge cal-badge--inline cal-badge--m">M</span> <span class="cal-badge cal-badge--inline cal-badge--a">A</span> <span class="cal-badge cal-badge--inline cal-badge--n">N</span> <span class="cal-badge cal-badge--inline cal-badge--n is-wide">N3</span> 근무 그룹으로 나뉘고, 날짜와 상관없이 정한 시각에 울리는 ‘정시 알람’은 따로 표시됩니다.</p>
+                  <p>위쪽에는 ‘이번 근무’와 ‘다음 근무’의 알람이 먼저 표시되어, 곧 울릴 알람을 바로 확인할 수 있습니다.</p>
+                  <p>같은 근무에 여러 알람을 설정해도 해당 근무 그룹 안에서 함께 확인할 수 있고, 각 알람 아래에는 출근 몇 시간 몇 분 전에 울리는지가 표시됩니다. 근무형태별로 서로 다른 알람 시간을 설정할 수 있어 주전 근무, 전근, 후근, 야근 등 각 근무에 맞는 알람 구성이 가능합니다.</p>
                 </div>
-                <figure class="slide-media is-placeholder" aria-hidden="true">
-                  <!-- TODO(Screenshot): alarm-view 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
-                </figure>
-              </li>
-              <li class="slide" id="alarm-view-2" aria-roledescription="단계" aria-label="2 / 2">
-                <div class="slide-text">
-                  <p class="slide-step">2 / 2</p>
-                  <h3>근무형태별로 알람을 구분합니다</h3>
-                  <p>같은 근무에 여러 알람을 설정해도 해당 근무 그룹 안에서 함께 확인할 수 있습니다.</p>
-                  <p>근무형태별로 서로 다른 알람 시간을 설정할 수 있어 주전 근무, 전근, 후근, 야근 등 각 근무에 맞는 알람 구성이 가능합니다. 각 알람에는 이번 근무와 다음 근무 중 언제 울릴지도 함께 표시됩니다.</p>
-                </div>
-                <figure class="slide-media is-placeholder" aria-hidden="true">
-                  <!-- TODO(Screenshot): alarm-view 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                <figure class="slide-media">
+                  <picture>
+                    <source srcset="./images/tips/alarm-1-main-dark.jpg" media="(prefers-color-scheme: dark)">
+                    <img src="./images/tips/alarm-1-main-light.jpg" alt="알람 화면. ‘이번 근무 - A’와 ‘다음 근무 - M’ 아래에 알람 시각과 출근 전 시간이 표시되고, 각 알람 옆에 스위치와 그룹마다 ‘관리’ 버튼이 있습니다." width="1179" height="2556" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
               </li>
           </ol>
@@ -69,7 +62,6 @@
             <button type="button" class="slide-nav" data-prev>‹ 이전</button>
             <div class="slide-dots">
                   <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
-                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
             </div>
             <button type="button" class="slide-nav" data-next>다음 ›</button>
           </div>
