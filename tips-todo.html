@@ -281,17 +281,21 @@
                 <div class="slide-text">
                   <p class="slide-step">1 / 2</p>
                   <h3>다음 회차를 기다리는 반복 할일을 확인합니다</h3>
-                  <p>‘대기중인 할 일’에서는 반복 설정이 적용된 항목의 다음 일정을 확인할 수 있습니다.</p>
+                  <p>‘대기중인 할 일’에서는 반복 설정이 적용된 항목의 다음 일정을 확인할 수 있습니다. 납기일 기준 반복은 ‘다음 회차’에, 완료시점 기준 반복은 ‘완료일기준’에 나뉘어 표시됩니다.</p>
                   <p>납기일 기준 반복은 정해진 납기를 기준으로 다음 회차가 미리 정해지고, 완료시점 기준 반복은 현재 회차를 실제로 완료한 시점을 기준으로 다음 회차가 정해집니다.</p>
                 </div>
-                <figure class="slide-media is-placeholder" aria-hidden="true">
-                  <!-- TODO(Screenshot): todo-pending 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                <figure class="slide-media">
+                  <picture>
+                    <source srcset="./images/tips/todo-pending-1-list-dark.webp" media="(prefers-color-scheme: dark)">
+                    <img src="./images/tips/todo-pending-1-list-light.webp" alt="대기중인 할 일 화면. ‘다음 회차’에 매주 납기일 기준 반복인 업무일지 정리하기가, ‘완료일기준’에 매주 완료시점 기준 반복인 고양이 밥주기가 표시됩니다." width="920" height="2000" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
               </li>
               <li class="slide" id="todo-pending-2" aria-roledescription="단계" aria-label="2 / 2">
                 <div class="slide-text">
                   <p class="slide-step">2 / 2</p>
                   <h3>다음 반복 일정을 관리합니다</h3>
+                  <p>항목을 누르면 아래에 관리 메뉴가 나타납니다.</p>
                   <dl class="slide-items">
                     <dt>이번 회차 미루기</dt>
                     <dd>현재 회차를 반복 주기만큼 한 번 뒤로 미룹니다. 시간과 알림 설정은 그대로 유지됩니다.</dd>
@@ -301,8 +305,11 @@
                     <dd>‘현재 및 이후 반복 삭제’를 선택하면 아직 완료하지 않은 현재 회차와 앞으로의 반복이 함께 삭제됩니다. 이미 완료한 지난 회차와 받은 알림 내역은 그대로 남습니다.</dd>
                   </dl>
                 </div>
-                <figure class="slide-media is-placeholder" aria-hidden="true">
-                  <!-- TODO(Screenshot): todo-pending 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                <figure class="slide-media">
+                  <picture>
+                    <source srcset="./images/tips/todo-pending-2-manage-dark.webp" media="(prefers-color-scheme: dark)">
+                    <img src="./images/tips/todo-pending-2-manage-light.webp" alt="대기중인 할 일 항목을 눌렀을 때 아래에 이번 회차 미루기, 반복할 세부할일, 반복 삭제 버튼이 표시된 화면입니다." width="920" height="2000" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
               </li>
           </ol>
