@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>알람 활용하기 · 활용 팁</title>
+  <meta name="description" content="에이스교대에서 근무일정에 맞춘 알람을 추가하고 관리하는 방법과 알람 설정을 안내합니다.">
+  <link rel="stylesheet" href="./tips.css?v=20261002-13">
+  <script src="./tips.js?v=20261002-6" defer></script>
+</head>
+<body>
+  <div class="page doc">
+    <nav class="doc-back" aria-label="이전 페이지">
+      <a href="./tips.html">‹ 활용 팁으로 돌아가기</a>
+    </nav>
+
+    <header class="doc-header">
+      <p class="hero-eyebrow">에이스교대 · 활용 팁</p>
+      <h1>알람 활용하기</h1>
+      <p class="doc-intro">근무일정에 맞춰 필요한 알람을 설정하고, 근무형태별로 서로 다른 시간의 알람을 관리할 수 있습니다.</p>
+      <p class="doc-intro">정시 알람부터 출근 전 알람, 이번 근무의 알람 관리와 자동 적용 방식까지 알람 기능의 주요 사용방법을 알아보세요.</p>
+    </header>
+
+    <details class="toc">
+      <summary>활용 팁 목차</summary>
+      <nav aria-label="활용 팁 목차">
+        <ul>
+          <li><a href="./tips-start.html">처음 시작하기</a></li>
+          <li><a href="./tips-calendar.html">캘린더</a></li>
+          <li><a href="./tips-roster.html">교대표</a></li>
+          <li><a href="./tips-payroll.html">급여</a></li>
+          <li><span aria-current="page">알람</span></li>
+          <!-- TODO(상세페이지): 페이지 제작 후 <a href="./...">로 교체 -->
+          <li><span class="is-pending">할일</span></li>
+        </ul>
+      </nav>
+    </details>
+
+    <main class="features" aria-label="알람 기능별 사용법">
+      <details class="feature" id="alarm-view">
+        <summary><h2>알람 화면 알아보기</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="알람 화면 알아보기 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="alarm-view-1" aria-roledescription="단계" aria-label="1 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 2</p>
+                  <h3>설정한 알람을 한눈에 확인합니다</h3>
+                  <p>알람 화면에서는 설정한 알람을 그룹으로 나누어 확인할 수 있습니다.</p>
+                  <p>날짜와 상관없이 정한 시각에 울리는 ‘정시 알람’과, 근무에 맞춰 울리는 ‘근무 알람’의 D 근무, M 근무, A 근무, N 근무, N3 근무 그룹으로 나뉩니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-view 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-view-2" aria-roledescription="단계" aria-label="2 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 2</p>
+                  <h3>근무형태별로 알람을 구분합니다</h3>
+                  <p>같은 근무에 여러 알람을 설정해도 해당 근무 그룹 안에서 함께 확인할 수 있습니다.</p>
+                  <p>근무형태별로 서로 다른 알람 시간을 설정할 수 있어 주전 근무, 전근, 후근, 야근 등 각 근무에 맞는 알람 구성이 가능합니다. 각 알람에는 이번 근무와 다음 근무 중 언제 울릴지도 함께 표시됩니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-view 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="alarm-add">
+        <summary><h2>알람 추가하기</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="알람 추가하기 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="alarm-add-1" aria-roledescription="단계" aria-label="1 / 3">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 3</p>
+                  <h3>필요한 근무에 알람을 추가합니다</h3>
+                  <p>각 근무 그룹의 ‘관리’에서 ‘추가’를 선택하면 해당 근무에 필요한 알람을 따로 추가할 수 있습니다.</p>
+                  <p>같은 근무에도 여러 개의 알람을 등록할 수 있어 준비시간이나 출근시간에 맞춰 필요한 만큼 설정할 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-add 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-add-2" aria-roledescription="단계" aria-label="2 / 3">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 3</p>
+                  <h3>알람 시간을 설정합니다</h3>
+                  <p>알람은 원하는 시각을 직접 지정하거나, 출근시간을 기준으로 몇 시간 몇 분 전에 울리도록 설정할 수 있습니다.</p>
+                  <dl class="slide-items">
+                    <dt>정시 알림</dt>
+                    <dd>울릴 시각을 직접 고르고, 근무일 당일 또는 전날 중 언제 울릴지 선택합니다.</dd>
+                    <dt>출근 전 알림</dt>
+                    <dd>출근 1분 전부터 23시간 59분 전까지 설정할 수 있습니다. 입력한 값은 저장할 때 실제 시각으로 바뀌어 저장되므로, 이후 근무 시작시각이 바뀌어도 알람 시각은 그대로 유지됩니다.</dd>
+                  </dl>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-add 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-add-3" aria-roledescription="단계" aria-label="3 / 3">
+                <div class="slide-text">
+                  <p class="slide-step">3 / 3</p>
+                  <h3>필요한 근무에서만 알람을 사용합니다</h3>
+                  <p>하나의 알람을 모든 근무에 똑같이 적용할 필요는 없습니다.</p>
+                  <p>알람의 ‘근무형태 설정’에서 울릴 근무를 선택할 수 있어, 같은 시간대의 알람이라도 필요한 근무에서만 사용할 수 있습니다. 예를 들어 M 근무 알람은 M, M2, M3 중에서, A 근무 알람은 A, A2 중에서 고를 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-add 3단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="3단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="alarm-manage">
+        <summary><h2>알람 관리하기</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="알람 관리하기 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="alarm-manage-1" aria-roledescription="단계" aria-label="1 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 4</p>
+                  <h3>이번 근무의 알람을 켜고 끕니다</h3>
+                  <p>알람 옆의 스위치를 이용해 다가오는 알람을 빠르게 끄거나 다시 켤 수 있습니다.</p>
+                  <dl class="slide-items">
+                    <dt>제일 빠른날만 끄기</dt>
+                    <dd>아직 울리지 않은 알람 중 가장 가까운 한 번만 끕니다. 그다음 날부터는 그대로 울립니다.</dd>
+                    <dt>이번 근무 전체 끄기</dt>
+                    <dd>이번에 이어지는 근무 기간 동안의 알람을 모두 끕니다. 메인 화면에서 다시 켤 수 있습니다.</dd>
+                  </dl>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-manage 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-manage-2" aria-roledescription="단계" aria-label="2 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 4</p>
+                  <h3>관리 메뉴로 알람을 정리합니다</h3>
+                  <p>각 근무 그룹의 ‘관리’를 누르면 해당 그룹에 새 알람을 ‘추가’하거나 기존 알람을 ‘삭제’할 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-manage 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-manage-3" aria-roledescription="단계" aria-label="3 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">3 / 4</p>
+                  <h3>여러 알람을 한 번에 삭제합니다</h3>
+                  <p>‘관리’에서 ‘삭제’를 선택하면 삭제할 알람을 여러 개 고른 뒤 ‘완료’를 눌러 한 번에 삭제할 수 있습니다.</p>
+                  <p>알람 하나만 지울 때는 목록에서 알람을 왼쪽으로 밀어 삭제할 수도 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-manage 3단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-manage-4" aria-roledescription="단계" aria-label="4 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">4 / 4</p>
+                  <h3>등록한 알람의 설정을 변경합니다</h3>
+                  <p>알람을 선택하면 ‘알람 편집’ 화면에서 등록된 시각과 근무형태 설정을 다시 확인하고 변경할 수 있습니다.</p>
+                  <p>‘대기열’에서는 앞으로 울릴 날짜별로 알람을 켜고 끌 수 있어, 기존 알람을 삭제하고 새로 만들지 않아도 필요한 설정을 수정할 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-manage 4단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="3단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="4단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="alarm-settings">
+        <summary><h2>알람 설정</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="알람 설정 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="alarm-settings-1" aria-roledescription="단계" aria-label="1 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 4</p>
+                  <h3>모든 근무</h3>
+                  <p>사이드 메뉴의 알람 &gt; 알람 설정에서 근무 알람이 울리는 방식을 고를 수 있습니다.</p>
+                  <p>‘모든 근무’를 선택하면 근무가 있는 모든 날 근무 알람이 울립니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-settings 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-settings-2" aria-roledescription="단계" aria-label="2 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 4</p>
+                  <h3>공휴일 제외</h3>
+                  <p>법정 공휴일인 근무일에는 근무 알람이 울리지 않습니다.</p>
+                  <p>공휴일이 아닌 근무일에는 평소처럼 근무 알람이 울립니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-settings 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-settings-3" aria-roledescription="단계" aria-label="3 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">3 / 4</p>
+                  <h3>변경된 근무만</h3>
+                  <p>캘린더에서 원래 근무를 직접 다른 근무로 바꾼 날에만 근무 알람이 울립니다.</p>
+                  <p>자동으로 만들어진 근무일정 그대로인 날에는 근무 알람이 울리지 않습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-settings 3단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="alarm-settings-4" aria-roledescription="단계" aria-label="4 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">4 / 4</p>
+                  <h3>끄기</h3>
+                  <p>근무일정에 맞춰 울리는 근무 알람을 사용하지 않습니다.</p>
+                  <p>이 설정은 근무 알람에만 적용되며, 따로 등록한 정시 알람은 그대로 울립니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): alarm-settings 4단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="3단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="4단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+    </main>
+
+    <footer class="doc-footer">
+      <p class="doc-disclaimer">앱 버전에 따라 화면의 일부 표시나 위치가 달라질 수 있습니다.</p>
+      <p><a href="./tips.html">‹ 활용 팁으로 돌아가기</a></p>
+    </footer>
+  </div>
+</body>
+</html>
