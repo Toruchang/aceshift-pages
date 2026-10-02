@@ -327,3 +327,7 @@ a.tip-link:focus-visible {
 .slide-items dt:first-child { margin-top: 0; }
 .slide-items dd { margin: 0.125rem 0 0; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .slides { transition: none; } }
+
+/* 대표 Media가 앱 아이콘인 카드: 원본 그대로 중앙에 표시 (변형·필터 없음) */
+.tip-media--icon { display: grid; place-items: center; border-style: none; }
+.tip-media.tip-media--icon img { width: 38%; height: auto; object-fit: contain; }
