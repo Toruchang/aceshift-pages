@@ -211,6 +211,7 @@ a.tip-link:focus-visible {
 .slides {
   position: relative;
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
   margin: 0;
   padding: 0;
@@ -317,3 +318,9 @@ a.tip-link:focus-visible {
   .slide-text { padding: 0; margin-bottom: 1.75rem; }
   .doc-note { padding: 2.5rem 3rem; border-radius: 2rem; }
 }
+
+/* Slide 안 항목별 설명 (예: 기본 급여 설정) */
+.slide-items { margin: 1rem 0; }
+.slide-items dt { margin-top: 0.875rem; font-weight: 600; color: var(--text); }
+.slide-items dt:first-child { margin-top: 0; }
+.slide-items dd { margin: 0.125rem 0 0; color: var(--muted); }
