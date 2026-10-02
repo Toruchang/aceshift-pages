@@ -21,6 +21,8 @@
         Math.abs(s.offsetLeft + s.offsetWidth / 2 - center) <
         Math.abs(slides[best].offsetLeft + slides[best].offsetWidth / 2 - center) ? i : best, 0);
       dots.forEach((d, i) => i === index ? d.setAttribute("aria-current", "step") : d.removeAttribute("aria-current"));
+      // Swipe 영역 높이를 현재 Slide 높이에 맞춤 (짧은 Slide 아래 빈 공간 방지)
+      track.style.height = slides[index].offsetHeight + "px";
       prev.disabled = index === 0;
       next.disabled = index === slides.length - 1;
     };
@@ -35,6 +37,7 @@
     dots.forEach((d, i) => d.addEventListener("click", () => go(i)));
 
     controls.hidden = false;
+    window.addEventListener("resize", update);
     update();
   }
 })();

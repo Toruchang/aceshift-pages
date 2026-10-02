@@ -217,7 +217,9 @@ a.tip-link:focus-visible {
   padding: 0;
   list-style: none;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
+  transition: height 0.2s ease;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   border-radius: 1.5rem;
@@ -324,3 +326,4 @@ a.tip-link:focus-visible {
 .slide-items dt { margin-top: 0.875rem; font-weight: 600; color: var(--text); }
 .slide-items dt:first-child { margin-top: 0; }
 .slide-items dd { margin: 0.125rem 0 0; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .slides { transition: none; } }
