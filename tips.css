@@ -427,3 +427,5 @@ a.tip-link:focus-visible {
 }
 /* 문장 안에 들어가는 Badge */
 .cal-badge.cal-badge--inline { margin: 0 0.0625rem; vertical-align: 0.1em; }
+/* 가로로 긴 대표 이미지: 정사각형 대신 원본 비율로 영역 폭을 채움 */
+.tip-media.tip-media--icon.tip-media--wide img { width: 90%; height: auto; max-height: 90%; aspect-ratio: auto; }
