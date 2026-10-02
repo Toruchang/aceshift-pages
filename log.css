@@ -1,0 +1,52 @@
+/* 패치노트·개발일지 전용 (style.css 위에 추가) */
+:root { --log-bg: #f5f5f7; --log-focus: #0071e3; }
+@media (prefers-color-scheme: dark) { :root { --log-bg: #1c1c1e; --log-focus: #4da3ff; } }
+
+.log-back { margin-bottom: 0.5rem; font-size: 1rem; }
+.log-back a, footer a { text-decoration: none; }
+.log-back a:hover, footer a:hover { text-decoration: underline; }
+a:focus-visible { outline: 3px solid var(--log-focus); outline-offset: 2px; border-radius: 0.25rem; }
+
+.log-list { margin-top: 1.5rem; }
+.log-entry { border-top: 1px solid var(--rule); }
+.log-entry:last-child { border-bottom: 1px solid var(--rule); }
+.log-entry summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+  padding: 1rem 0.25rem;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 0.5rem;
+}
+.log-entry summary::-webkit-details-marker { display: none; }
+.log-entry summary::after {
+  content: "";
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  margin: -0.25rem 0.25rem 0 0;
+}
+.log-entry[open] summary::after { transform: rotate(-135deg); margin-top: 0.25rem; }
+.log-entry summary:focus-visible { outline: 3px solid var(--log-focus); outline-offset: 2px; }
+.log-entry time { font-weight: 700; font-size: 1.0625rem; }
+.log-topics { grid-column: 1; color: var(--muted); font-size: 0.9375rem; line-height: 1.5; }
+.log-body { padding: 0 0.25rem 1.25rem; }
+.log-body h3 { margin: 1rem 0 0.25rem; font-size: 1.0625rem; }
+.log-body h3:first-child { margin-top: 0.25rem; }
+.log-body ul { margin: 0; }
+.log-note, .patch-empty { color: var(--muted); }
+.log-note { margin-top: 2rem; font-size: 0.9375rem; }
+.patch-empty {
+  margin: 1.5rem 0;
+  padding: 2rem 1rem;
+  background: var(--log-bg);
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.125rem;
+}
