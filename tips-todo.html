@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>할일 활용하기 · 활용 팁</title>
+  <meta name="description" content="에이스교대 할일에서 납기와 알림, 세부할일, 반복 할일을 관리하는 방법을 안내합니다.">
+  <link rel="stylesheet" href="./tips.css?v=20261002-13">
+  <script src="./tips.js?v=20261002-6" defer></script>
+</head>
+<body>
+  <div class="page doc">
+    <nav class="doc-back" aria-label="이전 페이지">
+      <a href="./tips.html">‹ 활용 팁으로 돌아가기</a>
+    </nav>
+
+    <header class="doc-header">
+      <p class="hero-eyebrow">에이스교대 · 활용 팁</p>
+      <h1>할일 활용하기</h1>
+      <p class="doc-intro">해야 할 일을 기록하고 납기와 알림, 세부할일을 함께 관리할 수 있습니다.</p>
+      <p class="doc-intro">한 번만 하면 되는 일부터 반복되는 일정까지 정리하고, 완료한 기록과 다음 회차도 한곳에서 확인해 보세요.</p>
+    </header>
+
+    <details class="toc">
+      <summary>활용 팁 목차</summary>
+      <nav aria-label="활용 팁 목차">
+        <ul>
+          <li><a href="./tips-start.html">처음 시작하기</a></li>
+          <li><a href="./tips-calendar.html">캘린더</a></li>
+          <li><a href="./tips-roster.html">교대표</a></li>
+          <li><a href="./tips-payroll.html">급여</a></li>
+          <li><a href="./tips-alarm.html">알람</a></li>
+          <li><span aria-current="page">할일</span></li>
+        </ul>
+      </nav>
+    </details>
+
+    <main class="features" aria-label="할일 기능별 사용법">
+      <details class="feature" id="todo-view">
+        <summary><h2>할일 화면 알아보기</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="할일 화면 알아보기 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="todo-view-1" aria-roledescription="단계" aria-label="1 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 4</p>
+                  <h3>해야 할 일을 한눈에 확인합니다</h3>
+                  <p>메인 화면에서는 가까운 납기의 할일과 내가 만든 목록을 빠르게 확인할 수 있습니다.</p>
+                  <dl class="slide-items">
+                    <dt>오늘·내일</dt>
+                    <dd>오늘과 내일이 납기인 할일, 그리고 납기가 지났지만 아직 완료하지 않은 할일을 모아 보여 줍니다.</dd>
+                    <dt>나의 목록</dt>
+                    <dd>‘전체보기’와 직접 만든 목록, 다음 회차를 기다리는 ‘대기중인 할 일’, ‘완료된 항목’을 확인할 수 있습니다.</dd>
+                  </dl>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-view 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-view-2" aria-roledescription="단계" aria-label="2 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 4</p>
+                  <h3>할일과 그룹을 빠르게 추가합니다</h3>
+                  <p>오른쪽 위의 + 버튼을 누르면 ‘그룹 신규 추가’와 ‘할일 추가’ 중에서 골라 바로 추가할 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-view 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-view-3" aria-roledescription="단계" aria-label="3 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">3 / 4</p>
+                  <h3>발생한 할일 알림을 확인합니다</h3>
+                  <p>‘알림함’ 버튼을 누르면 알림이 설정된 할일에서 받은 알림 내역을 확인할 수 있습니다. 읽지 않은 알림이 있으면 버튼에 표시됩니다.</p>
+                  <p>확인한 알림은 ‘모든 알림 지우기’로 한 번에 정리할 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-view 3단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-view-4" aria-roledescription="단계" aria-label="4 / 4">
+                <div class="slide-text">
+                  <p class="slide-step">4 / 4</p>
+                  <h3>나만의 그룹을 만듭니다</h3>
+                  <p>할일을 목적에 따라 나누고 싶다면 새로운 그룹(목록)을 만들 수 있습니다.</p>
+                  <p>‘목록 이름’과 ‘색상’을 직접 정해 업무, 개인 일정 등 원하는 기준으로 구분해 사용할 수 있습니다. 색상은 빨강, 주황, 노랑, 초록, 청록, 파랑, 남색, 보라, 분홍, 회색 중에서 고릅니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-view 4단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="3단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="4단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="todo-add">
+        <summary><h2>할일 추가하기</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="할일 추가하기 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="todo-add-1" aria-roledescription="단계" aria-label="1 / 6">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 6</p>
+                  <h3>할일의 기본 내용을 입력합니다</h3>
+                  <p>할일을 저장할 목록을 선택하고 ‘제목’과 필요한 ‘메모’를 입력합니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-add 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-add-2" aria-roledescription="단계" aria-label="2 / 6">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 6</p>
+                  <h3>큰 할일을 여러 단계로 나눕니다</h3>
+                  <p>‘세부할일’을 추가해 하나의 할일을 단계별로 나누어 관리할 수 있습니다.</p>
+                  <p>완료한 세부할일 비율이 진행률로 계산되어 목록에서 ‘50%’처럼 퍼센트로 표시됩니다. 세부할일을 모두 완료해도 할일 자체가 자동으로 완료되지는 않으며, 할일을 완료하면 남은 세부할일도 함께 완료됩니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-add 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-add-3" aria-roledescription="단계" aria-label="3 / 6">
+                <div class="slide-text">
+                  <p class="slide-step">3 / 6</p>
+                  <h3>언제까지 해야 하는지 납기를 정합니다</h3>
+                  <p>납기를 설정하면 할일 목록에서 처리해야 할 시점을 함께 확인할 수 있습니다.</p>
+                  <dl class="slide-items">
+                    <dt>날짜</dt>
+                    <dd>납기 날짜를 고르고, 시간은 ‘시간 없음’ 또는 ‘시간 지정’으로 정합니다.</dd>
+                    <dt>근무 시간과 연결</dt>
+                    <dd>납기 날짜가 근무일이라면 시간 대신 ‘근무 시작’ 또는 ‘근무 종료’를 고를 수 있습니다. 그날 근무 시간에 맞춰 납기 시각이 정해집니다.</dd>
+                    <dt>근무 날짜 기준</dt>
+                    <dd>날짜 대신 ‘근무 날짜’를 기준으로 고르면, 선택한 근무 종류가 있는 날을 찾아 납기로 정합니다.</dd>
+                  </dl>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-add 3단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-add-4" aria-roledescription="단계" aria-label="4 / 6">
+                <div class="slide-text">
+                  <p class="slide-step">4 / 6</p>
+                  <h3>납기 전에 미리 알림을 받습니다</h3>
+                  <p>납기가 설정된 할일에는 알림을 설정할 수 있습니다.</p>
+                  <p>‘당일’, ‘1일 전’처럼 납기 며칠 전에 받을지 고를 수 있고, 하나의 할일에 여러 개의 알림을 둘 수 있습니다.</p>
+                  <p>‘알림 추가’를 이용하면 원하는 날짜와 시각, 또는 그날의 근무 시작·종료 시각에 맞춘 알림도 따로 추가할 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-add 4단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-add-5" aria-roledescription="단계" aria-label="5 / 6">
+                <div class="slide-text">
+                  <p class="slide-step">5 / 6</p>
+                  <h3>중요한 할일을 눈에 띄게 표시합니다</h3>
+                  <p>‘우선 순위’를 설정하면 중요한 할일을 다른 항목과 구분해 확인할 수 있습니다.</p>
+                  <p>목록에서는 긴급이 빨간 ‘!!!’, 매우중요가 주황 ‘!!’, 중요가 노란 ‘!’로 표시됩니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-add 5단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-add-6" aria-roledescription="단계" aria-label="6 / 6">
+                <div class="slide-text">
+                  <p class="slide-step">6 / 6</p>
+                  <h3>반복되는 할일을 자동으로 관리합니다</h3>
+                  <p>‘반복 설정’을 사용하면 같은 할일을 정해진 주기로 다시 만들 수 있습니다.</p>
+                  <dl class="slide-items">
+                    <dt>납기일 기준</dt>
+                    <dd>정해진 납기일을 기준으로 다음 회차의 일정을 미리 계산합니다. 다음 회차는 ‘대기중인 할 일’에서 확인할 수 있습니다.</dd>
+                    <dt>완료시점 기준</dt>
+                    <dd>할일을 실제로 완료한 날짜를 기준으로 다음 회차의 일정을 계산합니다. 현재 회차를 완료하면 다음 날짜가 정해집니다.</dd>
+                    <dt>반복할 세부할일</dt>
+                    <dd>반복할 때마다 함께 넣을 세부할일을 정해 둘 수 있습니다. 새로 만들어지는 다음 회차부터 미완료 상태로 들어갑니다.</dd>
+                  </dl>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-add 6단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="3단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="4단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="5단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="6단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="todo-all">
+        <summary><h2>전체 보기</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="전체 보기 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="todo-all-1" aria-roledescription="단계" aria-label="1 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 2</p>
+                  <h3>모든 할일을 날짜순으로 확인합니다</h3>
+                  <p>‘전체보기’에서는 완료하지 않은 할일을 납기 순서대로 모아 확인할 수 있습니다.</p>
+                  <p>납기가 지난 항목은 ‘기간 지난 항목’으로 구분되며, 한 줄로 줄여서 볼 수도 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-all 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-all-2" aria-roledescription="단계" aria-label="2 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 2</p>
+                  <h3>필요한 기준으로 나누어 봅니다</h3>
+                  <p>오른쪽 위의 ‘보기 방식 변경’ 버튼을 이용하면 할일을 납기 순서대로 보는 ‘일정으로 보기’와 목록별로 나누어 보는 ‘목록별 분류’ 중에서 고를 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-all 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="todo-pending">
+        <summary><h2>대기중인 할 일</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="대기중인 할 일 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="todo-pending-1" aria-roledescription="단계" aria-label="1 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 2</p>
+                  <h3>다음 회차를 기다리는 반복 할일을 확인합니다</h3>
+                  <p>‘대기중인 할 일’에서는 반복 설정이 적용된 항목의 다음 일정을 확인할 수 있습니다.</p>
+                  <p>납기일 기준 반복은 정해진 납기를 기준으로 다음 회차가 미리 정해지고, 완료시점 기준 반복은 현재 회차를 실제로 완료한 시점을 기준으로 다음 회차가 정해집니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-pending 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-pending-2" aria-roledescription="단계" aria-label="2 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 2</p>
+                  <h3>다음 반복 일정을 관리합니다</h3>
+                  <dl class="slide-items">
+                    <dt>이번 회차 미루기</dt>
+                    <dd>현재 회차를 반복 주기만큼 한 번 뒤로 미룹니다. 시간과 알림 설정은 그대로 유지됩니다.</dd>
+                    <dt>반복할 세부할일</dt>
+                    <dd>다음 회차부터 들어갈 세부할일을 추가하거나 삭제할 수 있습니다.</dd>
+                    <dt>반복 삭제</dt>
+                    <dd>‘현재 및 이후 반복 삭제’를 선택하면 아직 완료하지 않은 현재 회차와 앞으로의 반복이 함께 삭제됩니다. 이미 완료한 지난 회차와 받은 알림 내역은 그대로 남습니다.</dd>
+                  </dl>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-pending 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+      <details class="feature" id="todo-done">
+        <summary><h2>완료된 항목</h2></summary>
+        <div class="carousel" data-carousel>
+          <ol class="slides" tabindex="0" aria-label="완료된 항목 단계, 좌우로 넘겨 보세요">
+              <li class="slide" id="todo-done-1" aria-roledescription="단계" aria-label="1 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">1 / 2</p>
+                  <h3>완료한 할일을 확인합니다</h3>
+                  <p>‘완료된 항목’에서는 어떤 할일을 언제 마쳤는지 완료한 시각과 함께 확인할 수 있습니다.</p>
+                  <p>필요 없는 기록은 선택해서 지우거나 ‘완료된 항목 모두 지우기’로 정리할 수 있으며, 이때 반복 설정과 앞으로의 회차는 그대로 유지됩니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-done 1단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+              <li class="slide" id="todo-done-2" aria-roledescription="단계" aria-label="2 / 2">
+                <div class="slide-text">
+                  <p class="slide-step">2 / 2</p>
+                  <h3>완료한 시점을 수정합니다</h3>
+                  <p>완료된 할일의 상세화면에서 ‘완료 시각’을 다시 정할 수 있습니다. 지금 이후의 시각으로는 바꿀 수 없습니다.</p>
+                  <p>이번 주에 완료한 항목은 ‘완료 해제’로 다시 미완료 상태로 되돌릴 수 있습니다.</p>
+                </div>
+                <figure class="slide-media is-placeholder" aria-hidden="true">
+                  <!-- TODO(Screenshot): todo-done 2단계 — Light/Dark picture 삽입 후 is-placeholder·aria-hidden 제거 -->
+                </figure>
+              </li>
+          </ol>
+          <div class="slide-controls" hidden>
+            <button type="button" class="slide-nav" data-prev>‹ 이전</button>
+            <div class="slide-dots">
+                  <button type="button" class="slide-dot" aria-label="1단계로 이동"></button>
+                  <button type="button" class="slide-dot" aria-label="2단계로 이동"></button>
+            </div>
+            <button type="button" class="slide-nav" data-next>다음 ›</button>
+          </div>
+        </div>
+      </details>
+    </main>
+
+    <aside class="doc-note" aria-labelledby="note-title">
+      <h2 id="note-title">알아두기</h2>
+      <h3>근무시각과 연결한 납기·알림</h3>
+      <p>근무 시작·종료 시간과 연결한 납기나 알림은 해당 날짜의 기본 근무일정을 기준으로 계산됩니다.</p>
+      <p>캘린더에서 그날의 근무를 직접 변경해도 연결된 시각이 함께 변경되지는 않습니다.</p>
+      <p>근무시간을 사용할 수 없는 휴무일의 알림은 오전 9시에 울립니다.</p>
+      <h3>완료시점 기준 반복을 미룰 때</h3>
+      <p>완료시점 기준 반복에서 ‘이번 회차 미루기’를 하면 미룬 날을 기준으로 반복 주기만큼 뒤가 현재 회차의 새 납기가 됩니다.</p>
+      <p>정해진 날짜로 옮기는 기능이 아니라, 오늘 처리한 것처럼 반복 주기를 다시 계산하는 방식이니 미루기 전에 새 납기를 확인해 주세요.</p>
+    </aside>
+
+    <footer class="doc-footer">
+      <p class="doc-disclaimer">앱 버전에 따라 화면의 일부 표시나 위치가 달라질 수 있습니다.</p>
+      <p><a href="./tips.html">‹ 활용 팁으로 돌아가기</a></p>
+    </footer>
+  </div>
+</body>
+</html>
