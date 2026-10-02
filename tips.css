@@ -145,7 +145,7 @@ a.tip-link:focus-visible {
 .doc-back a:hover, .doc-footer a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
 .doc-back a:focus-visible, .doc-footer a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 
-.doc-header { max-width: 44rem; margin-bottom: 3rem; }
+.doc-header { max-width: 44rem; margin-bottom: 2rem; }
 .doc-header h1 {
   margin: 0 0 1.25rem;
   font-size: clamp(2rem, 5.5vw, 3rem);
@@ -155,36 +155,150 @@ a.tip-link:focus-visible {
 }
 .doc-intro { margin: 0 0 0.75rem; font-size: clamp(1.0625rem, 2vw, 1.1875rem); line-height: 1.6; }
 
-.doc-section {
-  display: grid;
-  gap: 1.5rem;
-  padding: 2.5rem 0;
+/* 활용 팁 목차 (details/summary) */
+.toc {
+  max-width: 44rem;
+  margin-bottom: 3rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+}
+.toc summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 1rem;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  margin: -0.25rem 0.25rem 0 1rem;
+}
+.toc[open] summary::after { transform: rotate(-135deg); margin-top: 0.25rem; }
+.toc summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.toc ul { list-style: none; margin: 0; padding: 0 0.75rem 0.75rem; }
+.toc li > * {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.625rem 0.5rem;
   border-top: 1px solid var(--media-border);
 }
-.doc-section h2, .doc-note h2 {
-  margin: 0 0 0.875rem;
+.toc li:first-child > * { border-top: 0; }
+.toc [aria-current="page"] { color: var(--text); font-weight: 700; }
+.toc [aria-current="page"]::after { content: "현재 페이지"; color: var(--link); font-size: 0.875rem; font-weight: 600; }
+.toc .is-pending { color: var(--muted); }
+.toc .is-pending::after { content: "준비 중"; font-size: 0.875rem; }
+
+/* 초기 설정 사용법: 가로 Swipe */
+.guide { margin-bottom: 3rem; }
+.guide > h2, .doc-note h2 {
+  margin: 0 0 1.25rem;
   font-size: clamp(1.4375rem, 3vw, 1.875rem);
   line-height: 1.25;
   font-weight: 700;
 }
-.doc-text p { margin: 0 0 0.75rem; max-width: 40rem; }
-.doc-text p:last-child { margin-bottom: 0; }
-
-/* Screenshot 영역: 비어 있을 때만 임시 비율로 공간 확보, 이미지가 들어가면 원본 비율을 따름 */
-.doc-media {
+.carousel { max-width: 40rem; margin: 0 auto; }
+.slides {
+  position: relative;
+  display: flex;
+  gap: 1rem;
   margin: 0;
-  border-radius: 1rem;
-  overflow: hidden;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: 1.5rem;
 }
-.doc-media:not(:has(img)) {
-  aspect-ratio: 16 / 10;
+.slides::-webkit-scrollbar { display: none; }
+.slides:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  padding: 1.5rem 0.5rem 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1.5rem;
+}
+.slide-step { margin: 0 0 0.375rem; font-size: 0.9375rem; font-weight: 600; color: var(--muted); }
+.slide h3 { margin: 0 0 0.625rem; font-size: clamp(1.3125rem, 2.6vw, 1.625rem); line-height: 1.3; font-weight: 700; }
+.slide p { margin: 0 0 0.5rem; color: var(--muted); }
+.slide-text { padding: 0 0.75rem; margin-bottom: 1.25rem; }
+
+/* 세로 iPhone Screenshot: 원본 비율 유지, Crop 없음 */
+.slide-media { margin: 0 auto; width: 100%; max-width: 24rem; }
+.slide-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+/* 이미지 삽입 전 임시 자리 (최종 디자인 요소 아님) — img 삽입 시 is-placeholder 클래스 제거 */
+.slide-media.is-placeholder {
+  aspect-ratio: 1179 / 2556;
   background: var(--media-bg);
   border: 1px dashed var(--media-border);
+  border-radius: 1rem;
 }
-.doc-media img { display: block; width: 100%; height: auto; }
+
+/* 이전/다음 + Indicator (tips.js가 있을 때만 표시) */
+.slide-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.slide-controls[hidden] { display: none; }
+.slide-nav {
+  min-width: 4.5rem;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: 0;
+  border-radius: 0.5rem;
+  color: var(--link);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.slide-nav:disabled { color: var(--muted); opacity: 0.5; cursor: default; }
+.slide-nav:focus-visible, .slide-dot:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.slide-dots { display: flex; gap: 0.25rem; }
+.slide-dot {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slide-dot::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--media-border);
+}
+.slide-dot[aria-current="step"]::before { background: var(--text); }
 
 .doc-note {
-  margin-top: 1rem;
   padding: 1.75rem 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -199,7 +313,7 @@ a.tip-link:focus-visible {
 .doc-disclaimer { font-size: 0.875rem; }
 
 @media (min-width: 768px) {
-  .doc-header { margin-bottom: 3.5rem; }
-  .doc-section { padding: 3.5rem 0; gap: 3rem; grid-template-columns: 5fr 6fr; align-items: start; }
-  .doc-note { padding: 2.5rem 3rem; border-radius: 2rem; margin-top: 1.5rem; }
+  .slide { padding: 2.5rem 2.5rem 2rem; text-align: center; }
+  .slide p { margin-left: auto; margin-right: auto; max-width: 30rem; }
+  .doc-note { padding: 2.5rem 3rem; border-radius: 2rem; }
 }
