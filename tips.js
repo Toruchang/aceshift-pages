@@ -36,6 +36,10 @@
     next.addEventListener("click", () => go(index + 1));
     dots.forEach((d, i) => d.addEventListener("click", () => go(i)));
 
+    // 접힌 <details> 안에 있으면 펼칠 때 위치·높이·Indicator를 다시 계산
+    const section = root.closest("details");
+    if (section) section.addEventListener("toggle", () => { if (section.open) update(); });
+
     controls.hidden = false;
     window.addEventListener("resize", update);
     update();
