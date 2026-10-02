@@ -139,7 +139,8 @@ a.tip-link:focus-visible {
 .page-footer a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 0.25rem; }
 
 /* ===== 상세페이지 (tips-start.html 등) ===== */
-.doc { max-width: 60rem; }
+/* Hero·목차·사용법·알아두기가 같은 Content 축(44rem)을 사용 */
+.doc { max-width: 48rem; }
 .doc-back { margin-bottom: 2rem; font-size: 1rem; }
 .doc-back a, .doc-footer a { color: var(--link); text-decoration: none; border-radius: 0.25rem; }
 .doc-back a:hover, .doc-footer a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
@@ -207,7 +208,6 @@ a.tip-link:focus-visible {
   line-height: 1.25;
   font-weight: 700;
 }
-.carousel { max-width: 40rem; margin: 0 auto; }
 .slides {
   position: relative;
   display: flex;
@@ -313,7 +313,7 @@ a.tip-link:focus-visible {
 .doc-disclaimer { font-size: 0.875rem; }
 
 @media (min-width: 768px) {
-  .slide { padding: 2.5rem 2.5rem 2rem; text-align: center; }
-  .slide p { margin-left: auto; margin-right: auto; max-width: 30rem; }
+  .slide { padding: 2.5rem 2.5rem 2rem; }
+  .slide-text { padding: 0; margin-bottom: 1.75rem; }
   .doc-note { padding: 2.5rem 3rem; border-radius: 2rem; }
 }
