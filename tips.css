@@ -425,3 +425,5 @@ a.tip-link:focus-visible {
   .slide-dots { gap: 0; }
   .slide-dot { width: 1.5rem; }
 }
+/* 문장 안에 들어가는 Badge */
+.cal-badge.cal-badge--inline { margin: 0 0.0625rem; vertical-align: 0.1em; }

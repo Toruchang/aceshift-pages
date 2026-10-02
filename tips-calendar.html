@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark">
   <title>캘린더 활용하기 · 활용 팁</title>
   <meta name="description" content="에이스교대 캘린더에서 근무일정, 근무·근태·O/T·할일과 메모를 관리하는 방법을 안내합니다.">
-  <link rel="stylesheet" href="./tips.css?v=20261002-11">
+  <link rel="stylesheet" href="./tips.css?v=20261002-12">
   <script src="./tips.js?v=20261002-6" defer></script>
 </head>
 <body>
@@ -137,8 +137,11 @@
                   <p>캘린더에서 날짜를 선택하면 해당 날짜의 상세정보를 확인할 수 있습니다.</p>
                   <p>화면 상단에서는 설정된 근무형태와 근무시간, 입력된 O/T의 예상 금액을 확인할 수 있습니다.</p>
                 </div>
-                <figure class="slide-media is-placeholder" aria-hidden="true">
-                  <!-- TODO(Screenshot): calendar-view 7단계 — Light/Dark <picture> 삽입 후 is-placeholder·aria-hidden 제거 -->
+                <figure class="slide-media">
+                  <picture>
+                    <source srcset="./images/tips/calendar-7-detail-dark.webp" media="(prefers-color-scheme: dark)">
+                    <img src="./images/tips/calendar-7-detail-light.webp" alt="날짜 상세화면. 상단에 근무 Badge와 근무시간, O/T 금액이 표시되고, 아래에 근무·근태·할일 탭과 근무 시간 변경, O/T, 시간 공제 항목이 있습니다." width="920" height="2000" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
               </li>
           </ol>
@@ -347,12 +350,12 @@
       <h2 id="note-title">알아두기</h2>
       <h3>이번 달로 빠르게 이동하기</h3>
       <p>캘린더 화면 상단의 ‘캘린더’ 제목이나 하단 메뉴의 캘린더 아이콘을 두 번 탭하면 이번 달로 바로 이동합니다.</p>
-      <h3>M3, N3 근무와 특근일</h3>
-      <p>M3, N3 근무는 사용자가 근무형태를 직접 변경할 때에만 적용됩니다.</p>
-      <p>원래 근무가 M2, A2, N2와 같은 특근일에 M3 또는 N3를 적용하면 특근 맞교대로 설정됩니다.</p>
+      <h3>맞교대 근무와 특근일</h3>
+      <p><span class="cal-badge cal-badge--inline cal-badge--m is-wide">M3</span> <span class="cal-badge cal-badge--inline cal-badge--n is-wide">N3</span> 근무는 사용자가 근무형태를 직접 변경할 때에만 적용됩니다.</p>
+      <p>원래 근무가 <span class="cal-badge cal-badge--inline cal-badge--m is-wide">M2</span> <span class="cal-badge cal-badge--inline cal-badge--a is-wide">A2</span> <span class="cal-badge cal-badge--inline cal-badge--n is-wide">N2</span> 같은 특근일에 <span class="cal-badge cal-badge--inline cal-badge--m is-wide">M3</span> 또는 <span class="cal-badge cal-badge--inline cal-badge--n is-wide">N3</span>를 적용하면 특근 맞교대로 설정됩니다.</p>
       <h3>근무형태별 공휴일 근무</h3>
-      <p>주전 근무와 2조 2교대, 3조 3교대는 공휴일이 되면 자동으로 <span class="cal-badge cal-badge--s" style="vertical-align: middle; margin-top: 0">S</span> 휴무로 반영됩니다.</p>
-      <p>4조 3교대는 공휴일에 근무가 있으면 <span class="cal-badge cal-badge--m is-wide" style="vertical-align: middle; margin-top: 0">M2</span> <span class="cal-badge cal-badge--a is-wide" style="vertical-align: middle; margin-top: 0">A2</span> <span class="cal-badge cal-badge--n is-wide" style="vertical-align: middle; margin-top: 0">N2</span> 특근으로 표시됩니다.</p>
+      <p>주전 근무와 2조 2교대, 3조 3교대는 공휴일이 되면 자동으로 <span class="cal-badge cal-badge--inline cal-badge--s">S</span> 휴무로 반영됩니다.</p>
+      <p>4조 3교대는 공휴일에 근무가 있으면 <span class="cal-badge cal-badge--inline cal-badge--m is-wide">M2</span> <span class="cal-badge cal-badge--inline cal-badge--a is-wide">A2</span> <span class="cal-badge cal-badge--inline cal-badge--n is-wide">N2</span> 특근으로 표시됩니다.</p>
     </aside>
 
     <footer class="doc-footer">
