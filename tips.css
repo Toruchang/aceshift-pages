@@ -368,3 +368,54 @@ a.tip-link:focus-visible {
 .feature > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .feature > .carousel { padding-bottom: 1.5rem; }
 @media (min-width: 768px) { .feature > summary { padding: 1.5rem 0.25rem; } }
+
+/* 캘린더 근무 Badge·날짜 상태 표시 안내 — 색·형태는 앱 캘린더 구현 기준(AppTheme / CalendarWorkCodeBadge), 1.25배 확대 */
+:root {
+  --cal-m: #c79a18;
+  --cal-a: #2e6bad;
+  --cal-n: #8e8e93;
+  --cal-d: #ededed;
+  --cal-off-text: #c73838;
+  --cal-neutral-border: #c7c7cc;
+  --cal-red: #ff3b30;
+  --cal-orange: #ff9500;
+  --cal-blue: #2a63a7;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --cal-neutral-border: #48484a; --cal-red: #ff453a; --cal-orange: #ff9f0a; }
+}
+.cal-legend { list-style: none; margin: 0.5rem 0 0.5rem; padding: 0 0.75rem; display: grid; gap: 1rem; }
+.cal-legend li { display: grid; grid-template-columns: 2.75rem 1fr; column-gap: 0.75rem; align-items: start; }
+.cal-legend-text { line-height: 1.5; }
+.cal-legend-text strong { color: var(--text); }
+.cal-legend-text span { color: var(--muted); }
+.cal-badge {
+  display: inline-grid;
+  place-items: center;
+  justify-self: start;
+  margin-top: 0.125rem;
+  min-width: 1.75rem;
+  height: 1.25rem;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+.cal-badge--m { background: var(--cal-m); color: #000; }
+.cal-badge--a { background: var(--cal-a); color: #fff; }
+.cal-badge--n { background: var(--cal-n); color: #fff; }
+.cal-badge--d { background: var(--cal-d); color: #000; border-color: var(--cal-neutral-border); }
+.cal-badge--s { background: transparent; color: var(--cal-off-text); border-color: var(--cal-neutral-border); }
+.cal-badge.is-wide { min-width: 2.0625rem; }
+.cal-legend-mark { display: grid; place-items: center start; height: 1.5rem; padding-left: 0.5rem; }
+.cal-dot { width: 8px; height: 8px; border-radius: 50%; }
+.cal-dot--red { background: var(--cal-red); }
+.cal-dot--orange { background: var(--cal-orange); }
+.cal-dot--blue { background: var(--cal-blue); }
+@media (min-width: 768px) {
+  .cal-legend { grid-template-columns: 1fr 1fr; column-gap: 2rem; padding: 0; }
+  .cal-legend--dots { grid-template-columns: 1fr; }
+}
