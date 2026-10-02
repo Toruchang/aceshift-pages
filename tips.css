@@ -137,3 +137,69 @@ a.tip-link:focus-visible {
 }
 .page-footer a { color: var(--link); text-underline-offset: 0.15em; }
 .page-footer a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 0.25rem; }
+
+/* ===== 상세페이지 (tips-start.html 등) ===== */
+.doc { max-width: 60rem; }
+.doc-back { margin-bottom: 2rem; font-size: 1rem; }
+.doc-back a, .doc-footer a { color: var(--link); text-decoration: none; border-radius: 0.25rem; }
+.doc-back a:hover, .doc-footer a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.doc-back a:focus-visible, .doc-footer a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.doc-header { max-width: 44rem; margin-bottom: 3rem; }
+.doc-header h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.doc-intro { margin: 0 0 0.75rem; font-size: clamp(1.0625rem, 2vw, 1.1875rem); line-height: 1.6; }
+
+.doc-section {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--media-border);
+}
+.doc-section h2, .doc-note h2 {
+  margin: 0 0 0.875rem;
+  font-size: clamp(1.4375rem, 3vw, 1.875rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+.doc-text p { margin: 0 0 0.75rem; max-width: 40rem; }
+.doc-text p:last-child { margin-bottom: 0; }
+
+/* Screenshot 영역: 비어 있을 때만 임시 비율로 공간 확보, 이미지가 들어가면 원본 비율을 따름 */
+.doc-media {
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.doc-media:not(:has(img)) {
+  aspect-ratio: 16 / 10;
+  background: var(--media-bg);
+  border: 1px dashed var(--media-border);
+}
+.doc-media img { display: block; width: 100%; height: auto; }
+
+.doc-note {
+  margin-top: 1rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1.5rem;
+}
+.doc-note h3 { margin: 1.5rem 0 0.375rem; font-size: 1.125rem; line-height: 1.4; }
+.doc-note h2 + h3 { margin-top: 0.5rem; }
+.doc-note p { margin: 0 0 0.5rem; color: var(--muted); max-width: 44rem; }
+
+.doc-footer { margin-top: 3rem; font-size: 0.9375rem; color: var(--muted); }
+.doc-footer p { margin: 0 0 0.75rem; }
+.doc-disclaimer { font-size: 0.875rem; }
+
+@media (min-width: 768px) {
+  .doc-header { margin-bottom: 3.5rem; }
+  .doc-section { padding: 3.5rem 0; gap: 3rem; grid-template-columns: 5fr 6fr; align-items: start; }
+  .doc-note { padding: 2.5rem 3rem; border-radius: 2rem; margin-top: 1.5rem; }
+}
