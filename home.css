@@ -58,6 +58,7 @@ a.home-card .home-card-title { color: var(--link); }
 @media (min-width: 600px) {
   .home-cards { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .home-card { min-height: 11rem; }
+  .home-cards--3 { grid-template-columns: repeat(3, 1fr); }
 }
 .icon-apple { color: var(--text); }
 .icon-android { color: var(--icon-android); }
