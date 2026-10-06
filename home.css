@@ -7,7 +7,8 @@
   --icon-tips: #c77700;
   --icon-patch: #0a7d5a;
   --icon-dev: #4f5bd5;
-  --platform-btn-bg: #ffffff;
+  --dl-btn-bg: #1c1c1e;
+  --dl-btn-text: #ffffff;
   --icon-android: #1a9e5c;
 }
 @media (prefers-color-scheme: dark) {
@@ -19,7 +20,8 @@
     --icon-tips: #ffb340;
     --icon-patch: #30d18c;
     --icon-dev: #8e9bff;
-    --platform-btn-bg: #2c2c2e;
+    --dl-btn-bg: #f2f2f7;
+    --dl-btn-text: #000000;
     --icon-android: #3ddc84;
   }
 }
@@ -44,7 +46,7 @@
 }
 a.home-card:hover { background: var(--home-card-hover); }
 a.home-card:focus-visible { outline: 3px solid var(--home-focus); outline-offset: 3px; }
-.home-card svg { width: 3rem; height: 3rem; flex: none; }
+.home-card > svg { width: 3rem; height: 3rem; flex: none; }
 .home-card-title { font-size: 1.1875rem; font-weight: 600; line-height: 1.3; }
 a.home-card .home-card-title { color: var(--link); }
 .home-card-note { font-size: 0.875rem; color: var(--muted); }
@@ -54,40 +56,26 @@ a.home-card .home-card-title { color: var(--link); }
 .icon-dev { color: var(--icon-dev); }
 
 @media (min-width: 600px) {
-  .home-cards { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .home-cards { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .home-card { min-height: 11rem; }
 }
-/* 플랫폼 카드: 아직 연결된 동작이 없어 버튼은 disabled 상태로만 둔다 */
-.platform-card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  margin: 1.5rem 0 0;
-  padding: 1rem;
-  background: var(--home-card-bg);
-  border: 1px solid var(--home-card-border);
-  border-radius: 1.25rem;
-}
-.platform-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 3.25rem;
-  padding: 0.75rem 1rem;
-  background: var(--platform-btn-bg);
-  border: 1px solid var(--home-card-border);
-  border-radius: 0.875rem;
-  color: var(--text);
-  font: inherit;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  line-height: 1;
-  cursor: default;
-}
-.platform-btn svg { width: 1.375rem; height: 1.375rem; flex: none; }
+.icon-apple { color: var(--text); }
 .icon-android { color: var(--icon-android); }
-@media (max-width: 320px) {
-  .platform-card { grid-template-columns: 1fr; }
-}
+.home-cards { margin-top: 0; }
+.home-card-desc { font-size: 0.9375rem; color: var(--muted); line-height: 1.5; max-width: 20rem; }
+.home-card-more { margin-top: auto; font-size: 0.9375rem; font-weight: 600; color: var(--link); }
+.home-dl-btn, .home-dl-status { margin-top: auto; padding: 0.5rem 1.125rem; border-radius: 999px; font-size: 0.9375rem; font-weight: 600; }
+/* 링크 발급 전: href 없는 a + aria-disabled, 이동 없음 */
+.home-dl-btn { background: var(--dl-btn-bg); color: var(--dl-btn-text); text-decoration: none; }
+.home-dl-btn[aria-disabled="true"] { opacity: 0.45; cursor: default; }
+.home-dl-status { border: 1px solid var(--rule); color: var(--muted); font-weight: 500; }
+
+.home-hero { text-align: center; padding-top: 1rem; }
+.home-hero-icon { display: block; width: 6rem; height: 6rem; margin: 0 auto 1rem; border-radius: 22.5%; }
+.home-hero h1 { margin-bottom: 0.25rem; }
+.home-tagline { margin: 1.25rem 0 0.5rem; font-size: 1.1875rem; font-weight: 600; }
+.home-lead { margin: 0 auto; max-width: 30rem; color: var(--muted); }
+.home-section-title { margin: 2.5rem 0 1rem; font-size: 1.25rem; }
+.home-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); text-align: center; color: var(--muted); font-size: 0.9375rem; }
+.home-footer p { margin: 0.25rem 0; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
