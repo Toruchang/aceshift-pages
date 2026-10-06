@@ -7,6 +7,8 @@
   --icon-tips: #c77700;
   --icon-patch: #0a7d5a;
   --icon-dev: #4f5bd5;
+  --platform-btn-bg: #ffffff;
+  --icon-android: #1a9e5c;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,6 +19,8 @@
     --icon-tips: #ffb340;
     --icon-patch: #30d18c;
     --icon-dev: #8e9bff;
+    --platform-btn-bg: #2c2c2e;
+    --icon-android: #3ddc84;
   }
 }
 
@@ -52,5 +56,38 @@ a.home-card .home-card-title { color: var(--link); }
 @media (min-width: 600px) {
   .home-cards { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   .home-card { min-height: 11rem; }
+}
+/* 플랫폼 카드: 아직 연결된 동작이 없어 버튼은 disabled 상태로만 둔다 */
+.platform-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 1rem;
+  background: var(--home-card-bg);
+  border: 1px solid var(--home-card-border);
+  border-radius: 1.25rem;
+}
+.platform-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--platform-btn-bg);
+  border: 1px solid var(--home-card-border);
+  border-radius: 0.875rem;
+  color: var(--text);
+  font: inherit;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: default;
+}
+.platform-btn svg { width: 1.375rem; height: 1.375rem; flex: none; }
+.icon-android { color: var(--icon-android); }
+@media (max-width: 320px) {
+  .platform-card { grid-template-columns: 1fr; }
 }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }

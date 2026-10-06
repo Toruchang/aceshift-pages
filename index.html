@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>에이스교대 (AceShift Calendar)</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./home.css?v=20261002-1">
+  <link rel="stylesheet" href="./home.css?v=20261007-1">
 </head>
 <body>
   <header>
@@ -14,6 +14,19 @@
   </header>
   <main>
     <p>에이스교대는 교대근무 일정, 근태, 예상 급여를 기기 안에서 관리하는 iPhone 앱입니다.</p>
+    <section class="platform" aria-labelledby="platform-title">
+      <h2 id="platform-title" class="visually-hidden">플랫폼</h2>
+      <div class="platform-card">
+        <button type="button" class="platform-btn" disabled>
+          <svg class="icon-apple" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+          <span lang="en">iOS</span>
+        </button>
+        <button type="button" class="platform-btn" disabled>
+          <svg class="icon-android" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.2 6.6 5.6 3.9M16.8 6.6l1.6-2.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="M2.5 17.5a9.5 9.5 0 0 1 19 0z" fill="currentColor"/><circle cx="8" cy="13.4" r="1.15" fill="var(--platform-btn-bg)"/><circle cx="16" cy="13.4" r="1.15" fill="var(--platform-btn-bg)"/></svg>
+          <span lang="en">Android</span>
+        </button>
+      </div>
+    </section>
     <section aria-labelledby="home-cards-title">
       <h2 id="home-cards-title" class="visually-hidden">주요 콘텐츠</h2>
       <ul class="home-cards">
