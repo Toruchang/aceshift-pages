@@ -6,7 +6,7 @@
   <title>패치노트 · 에이스교대</title>
   <meta name="description" content="에이스교대 버전별 변경사항입니다.">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./log.css?v=20261002-1">
+  <link rel="stylesheet" href="./log.css?v=20261008-1">
 </head>
 <body>
   <nav class="log-back" aria-label="이전 페이지"><a href="./index.html">‹ 에이스교대 홈으로 돌아가기</a></nav>
@@ -14,14 +14,47 @@
     <h1>패치노트</h1>
   </header>
   <main>
-    <!-- 1.0.0 출시 이후 변경사항은 아래 형식으로 최신 버전이 위에 오도록 추가
-    <section class="patch-entry" aria-labelledby="v1-0-1">
-      <h2 id="v1-0-1">1.0.1 <time datetime="YYYY-MM-DD">YYYY-MM-DD</time></h2>
+    <div class="patch-tabs" role="tablist" aria-label="플랫폼">
+      <button type="button" role="tab" id="tab-ios" aria-controls="panel-ios" aria-selected="true">iOS</button>
+      <button type="button" role="tab" id="tab-android" aria-controls="panel-android" aria-selected="false" tabindex="-1">Android</button>
+    </div>
+    <!-- 변경사항은 각 패널 안에 아래 형식으로 최신 버전이 위에 오도록 추가 (id는 패널마다 겹치지 않게)
+    <section class="patch-entry" aria-labelledby="ios-1-0-1">
+      <h2 id="ios-1-0-1">1.0.1 <time datetime="YYYY-MM-DD">YYYY-MM-DD</time></h2>
       <ul><li>변경 내용</li></ul>
     </section>
     -->
-    <p class="patch-empty">패치내용 없음</p>
+    <section class="patch-panel" id="panel-ios" role="tabpanel" aria-labelledby="tab-ios">
+      <p class="patch-empty">패치내용 없음</p>
+    </section>
+    <section class="patch-panel" id="panel-android" role="tabpanel" aria-labelledby="tab-android" hidden>
+      <p class="patch-empty">패치내용 없음</p>
+    </section>
   </main>
+  <script>
+    // 상단 탭 전환 (#android 주소로 열면 Android 탭부터 표시)
+    (() => {
+      const tabs = [...document.querySelectorAll('.patch-tabs [role="tab"]')];
+      const select = (tab, focus) => {
+        for (const t of tabs) {
+          const on = t === tab;
+          t.setAttribute("aria-selected", on);
+          t.tabIndex = on ? 0 : -1;
+          document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+        }
+        if (focus) tab.focus();
+        history.replaceState(null, "", tab.id === "tab-android" ? "#android" : location.pathname);
+      };
+      tabs.forEach((t, i) => {
+        t.addEventListener("click", () => select(t));
+        t.addEventListener("keydown", (e) => {
+          const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+          if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length], true); }
+        });
+      });
+      if (location.hash === "#android") select(tabs[1]);
+    })();
+  </script>
   <footer>
     <a href="./index.html">‹ 에이스교대 홈으로 돌아가기</a>
   </footer>

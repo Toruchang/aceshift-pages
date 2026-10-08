@@ -1,6 +1,6 @@
 /* 패치노트·개발일지 전용 (style.css 위에 추가) */
-:root { --log-bg: #f5f5f7; --log-focus: #0071e3; }
-@media (prefers-color-scheme: dark) { :root { --log-bg: #1c1c1e; --log-focus: #4da3ff; } }
+:root { --log-bg: #f5f5f7; --log-focus: #0071e3; --log-tab-on: #ffffff; }
+@media (prefers-color-scheme: dark) { :root { --log-bg: #1c1c1e; --log-focus: #4da3ff; --log-tab-on: #3a3a3c; } }
 
 .log-back { margin-bottom: 0.5rem; font-size: 1rem; }
 .log-back a, footer a { text-decoration: none; }
@@ -50,3 +50,9 @@ a:focus-visible { outline: 3px solid var(--log-focus); outline-offset: 2px; bord
   text-align: center;
   font-size: 1.125rem;
 }
+
+/* 패치노트 iOS / Android 상단 탭 */
+.patch-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem; margin: 1.5rem 0 0; padding: 0.25rem; background: var(--log-bg); border-radius: 0.875rem; }
+.patch-tabs [role="tab"] { padding: 0.625rem 1rem; border: 0; border-radius: 0.625rem; background: transparent; color: var(--muted); font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.patch-tabs [aria-selected="true"] { background: var(--log-tab-on); color: var(--text); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+.patch-tabs [role="tab"]:focus-visible { outline: 3px solid var(--log-focus); outline-offset: 2px; }
