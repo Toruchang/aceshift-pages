@@ -56,3 +56,7 @@ a:focus-visible { outline: 3px solid var(--log-focus); outline-offset: 2px; bord
 .patch-tabs [role="tab"] { padding: 0.625rem 1rem; border: 0; border-radius: 0.625rem; background: transparent; color: var(--muted); font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; }
 .patch-tabs [aria-selected="true"] { background: var(--log-tab-on); color: var(--text); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
 .patch-tabs [role="tab"]:focus-visible { outline: 3px solid var(--log-focus); outline-offset: 2px; }
+.patch-entry { padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
+.patch-entry h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+.patch-entry h2 time { margin-left: 0.5rem; color: var(--muted); font-size: 0.9375rem; font-weight: 500; }
+.patch-entry ul { margin: 0; }
